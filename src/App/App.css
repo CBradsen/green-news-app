@@ -1,10 +1,11 @@
-.App {
+.Home {
   font-family: 'Lato', sans-serif;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 25vmin;
+  pointer-events: all;
+  padding-right: 3%;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -14,19 +15,30 @@
 } */
 
 .App-header {
-  background-color: whitesmoke;
-  min-height: 100vh;
+  background-color: #FFFFFF;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: left;
-  justify-content: left;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 3%;
+  font-size: calc(2px + 1.5vmin);
   color: rgb(2, 34, 2);
 }
 
-/* .App-link {
-  color: #61dafb;
-} */
+.date-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.today {
+  color: #010101;
+}
+h2 {
+  text-align: center;
+  margin-top: .5%;
+}
 
 /* @keyframes App-logo-spin {
   from {
