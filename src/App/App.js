@@ -1,4 +1,4 @@
-import genlogo from './genlogo.svg';
+import genlogo from '../assets/genlogo.svg';
 import './App.css';
 
 function App() {

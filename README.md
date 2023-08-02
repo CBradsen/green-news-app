@@ -1,8 +1,12 @@
 # Green Energy News
 
-Green Energy News brings you the latest headlines from around the world , along with the state of Colorado, and the Western United States.
+Green Energy News brings you the latest headlines from around the world, the Western United States, and Colorado.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Font
+Lato is used through out. This sans-serif font was chosen for its readability, nod to newspaper fonts, and interesting look.
 
 ## Available Scripts
 
