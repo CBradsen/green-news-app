@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+import genlogo from './genlogo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={genlogo} className="App-logo" alt="green-energy-news-logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
