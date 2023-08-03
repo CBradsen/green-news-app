@@ -1,5 +1,3 @@
-
-
 .card {
   width: 200px;
   height: 350px;
@@ -31,3 +29,6 @@
   margin: 5px 0;
 }
 
+.type {
+  color: rgb(44, 44, 117);
+}

@@ -1,19 +1,27 @@
 import "./StoryDetail.css";
 import { useParams } from "react-router-dom";
 
-function StoryDetail({ article }) {
+function StoryDetail({ worldNews }) {
   let { id } = useParams();
-  return (
-    <div className="story-detail">
-      {id}
-      <h6>| {article.type}</h6>
-      <img src={article.urlToImage} alt="Image illustrating the article"></img>
-      <h3>{article.title}</h3>
-      <h5>{article.source.name}</h5>
-      <p>
-        {article.formattedDate} —{article.content}
-      </p>
+  const article =worldNews.find(article => article.id === id);
+
+  if (!article) {
+    return (
+    <div>
+      <p>Article is not available</p>
     </div>
+    )
+  }
+  return (
+    <main>
+    <div className="story-detail">
+      <h4>| {article.type}</h4>
+      <img src={article.urlToImage} alt="Image illustrating the article"></img>
+      <h2>{article.title}</h2>
+      <h5>{article.source.name}</h5>
+      <p>{article.formattedDate} —{article.content}</p>
+    </div>
+    </main>
   );
 }
 
