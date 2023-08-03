@@ -1,15 +1,8 @@
-/* .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-} */
+
 
 .card {
-  /* border-color: indianred;
-  border-width: 10px;
-  border-style: solid; */
   width: 200px;
-  height: 300px;
+  height: 350px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
