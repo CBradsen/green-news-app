@@ -5,7 +5,7 @@
 .App-logo {
   height: 25vmin;
   pointer-events: all;
-  padding-right: 3%;
+  padding-left: 5%;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -29,15 +29,21 @@
 .date-container {
   display: flex;
   flex-direction: column;
-  
 }
 
 .today {
   color: #010101;
 }
+
 h2 {
   text-align: center;
   margin-top: .5%;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* @keyframes App-logo-spin {
