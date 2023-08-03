@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 
 
 //World
@@ -13,6 +14,7 @@ export const world = () => {
     .then(data => {
       data.articles.forEach(article => {
         article.type = 'World';
+        article.id = uuidv4();
         let date = new Date(article.publishedAt);
         let formattedDate = `${date.toLocaleString( 'default', { month: 'long'})} ${date.getDate()}`;
         article.formattedDate = formattedDate;
