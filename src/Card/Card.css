@@ -1,0 +1,40 @@
+/* .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+.card {
+  /* border-color: indianred;
+  border-width: 10px;
+  border-style: solid; */
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+  margin: 10px;
+  box-sizing: Border-box;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 120px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}  
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+

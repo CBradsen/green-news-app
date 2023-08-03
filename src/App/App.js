@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import genlogo from '../assets/genlogo.svg';
 import './App.css';
 import { world } from '../api-calls/api-calls';
-
+import Card from '../Card/Card'
 
 const date = new Date(); 
 const headline = { 
@@ -12,7 +12,6 @@ const headline = {
   month: 'long', 
   day: 'numeric' 
 };
-
 
 const todayQuery = date.toISOString().split('T')[0];
 
@@ -36,8 +35,6 @@ function App() {
       });
   }, []);
 
-  
-
    if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -57,19 +54,13 @@ function App() {
           </h1>
         </div>
       </header>
+      <h2>
+          Recent World Headlines
+      </h2>
       <main>
-         <h2>
-          Today's Headlines
-        </h2>
         {worldNews.map((article, index) => (
-          <a key={index} href={article.url}>
-            {article.title}
-          </a>
-        )
-        )}
-        <a>
-          {}
-        </a>
+          <Card key={index} article={article} />
+        ))}
       </main>
     </div>
   );
