@@ -11,6 +11,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [category, setCategory] = useState("all");
+  const [displayedNews, setDisplayedNews] = useState(allNews);
 
   const location = useLocation();
 
@@ -42,6 +43,21 @@ function App() {
     return <div>Error: {error}</div>;
   }
 
+  useEffect(() => {
+  if (category === 'world') {
+    setDisplayedNews(allNews.filter(news => news.type === 'world'));
+  } else if (category === 'usa') {
+    setDisplayedNews(allNews.filter(news => news.type === 'usa'));
+  } else if (category === 'today') {
+    let today = new Date();
+    let formattedToday = `${today.toLocaleString( 'default', { month: 'long'})} ${today.getDate()}`;
+    setDisplayedNews(allNews.filter(news => news.formattedDate === formattedToday));
+  } else {
+    setDisplayedNews(allNews);
+  }
+}, [category]);
+
+
   function handleCategoryChange(value) {
     setCategory(value);
   }
@@ -53,7 +69,7 @@ function App() {
         <Routes>
           <Route 
             path="/" 
-            element={<Home allNews={allNews}/>} />
+            element={<Home displayedNews={displayedNews}/>} />
           <Route
             path="/:id/:title"
             element={<StoryDetail allNews={allNews}/>} />
