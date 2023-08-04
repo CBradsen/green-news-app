@@ -1,12 +1,13 @@
 # Green Energy News
 
 Green Energy News brings you the latest headlines about green energy from around the world and the United States.
+You can sort to see only World news or news from the United States. Then click to read the article. 
+![Screen Recording 2023-08-04 at 10 13 20 AM](https://github.com/CBradsen/green-news-app/assets/117617970/afac3b8c-9255-48f4-af43-8cd174c9c6e2)
 
-![image](https://github.com/CBradsen/green-news-app/assets/117617970/8ae57a02-e3df-42ed-9f3c-a4003c6aa624)
 
 ## Query
-
-This site is built by accessing data collected by News API newsapi.org
+This site is built by accessing data collected by [News API](newsapi.org) 
+<br>
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/1c14582f-977d-48f4-ac23-f08ea6d523b8)
 
 To retreive WORLD green energy news the Everything end point is used.
@@ -48,20 +49,19 @@ UUID 9.0
 
 Project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+## Wins and Challenges
+- Used Router version 6 for the first time
+- Used Hooks for the first time
+- Completed the project in two days
 
 ### `npm start`
-
+To see the site for yourself, clone down this repo, run npm install
+then npm start to launch the site...
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/8ae57a02-e3df-42ed-9f3c-a4003c6aa624)
 
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/4ec60f1a-8274-4e9e-89ce-bb114d070f5b)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
