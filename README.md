@@ -25,6 +25,8 @@ washingtonpost.com, denverpost.com, latimes.com, and usatoday.com
 The font Lato was chosen from Google Fonts and used exclusively. 
 <br>This sans-serif font was chosen for its readability, nod to newspaper fonts, and multiple font weights.
 <br>
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/e56d7f5e-5362-4be2-a36e-909419b63b89)
+<br>
 In a Lighthouse review the site recieved an 8/9.
 This was not 9/9 due to using smaller headline sizes at the top of the page.
 Future iterations could remedy this, so that screen readers could best serve visitors to the site. 
@@ -33,19 +35,20 @@ Future iterations could remedy this, so that screen readers could best serve vis
 ## Process
 Experimenting with the api and it's possibilities began my UX Design process. 
 <br>
-I wanted to find a niche that was both interesting to me and had value to potential users.
+I wanted to find a niche that had value to potential users and something I cared about.
 <br>
-After settling on Green Energy news, I 
+After settling on Green Energy news, I:
+<br>
 - created a user persona
 - researched other online news sites
 - drew lofi wireframes
 - wrote user stories
 - kept prject notes in a Notion page
 - created a list of project tasks with a [github project board](https://github.com/users/CBradsen/projects/2) 
-
+<br>
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/f0d09cbb-effd-4cb2-a205-dfdc79e57b55)
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/459c758f-e0d5-4e90-8c4b-67dc0e2a3537)
-
+<br>
 ## Technologies
 React, 18.2.0 <br>
 React Router, 6.14.2 <br>
@@ -55,11 +58,12 @@ Project was bootstrapped with [Create React App](https://github.com/facebook/cre
 
 ## Wins and Challenges
 - Used Router version 6 for the first time
-- Used Hooks for the first time
+- Used Hooks for the first time in a solo project
 - Completed the project in two days
 
 ### `npm start`
-To see the site for yourself, clone down this repo, and run npm install
+To see the site for yourself, clone down this repo, then type:
+<br>  run npm install
 <br> typing npm start with then launch the site...
 <br> The app will run in the development mode on your computer. 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
