@@ -12,7 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [category, setCategory] = useState("all");
-  const [displayedNews, setDisplayedNews] = useState(allNews);
+  const [displayedNews, setDisplayedNews] = useState([]);
 
   const location = useLocation();
 
@@ -28,6 +28,7 @@ function App() {
         const combinedNews = [...worldNews, ...usaNews];
 
         setNews(combinedNews);
+        setDisplayedNews(combinedNews);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -36,14 +37,6 @@ function App() {
       });
   }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
 
   function handleCategoryChange(value) {
     setCategory(value);
@@ -51,17 +44,34 @@ function App() {
 
   useEffect(() => {
   if (category === 'world') {
-    setDisplayedNews(allNews.filter(news => news.type === 'world'));
+    setDisplayedNews(allNews.filter(article => article.type === 'World'));
   } else if (category === 'usa') {
-    setDisplayedNews(allNews.filter(news => news.type === 'usa'));
+    setDisplayedNews(allNews.filter(article => article.type === 'USA'));
   } else if (category === 'today') {
-    let today = new Date();
-    let formattedToday = `${today.toLocaleString( 'default', { month: 'long'})} ${today.getDate()}`;
-    setDisplayedNews(allNews.filter(news => news.formattedDate === formattedToday));
+    let todaysDate = new Date();
+    let dateToday = todaysDate.toISOString().split("T")[0];
+      console.log(dateToday, "dateToday")
+
+    // let today = new Date();
+    // let formattedToday = `${today.toLocaleString( 'default', { month: 'long'})} ${today.getDate()}`;
+
+    setDisplayedNews(allNews.filter(article => {
+    let publishedDate = article.publishedAt.split("T")[0];
+    console.log(publishedDate, "publishedDate")
+    return publishedDate === dateToday
+  }));
   } else {
     setDisplayedNews(allNews);
   }
 }, [category]);
+
+if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
 
 

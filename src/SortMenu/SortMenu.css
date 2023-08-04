@@ -1,0 +1,14 @@
+.sort-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.sort-menu label {
+  font-size: .8rem;
+  font-weight: 600;
+  padding-right: 10px;
+  padding-top: 3px;
+
+}
