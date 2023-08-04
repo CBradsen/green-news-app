@@ -73,8 +73,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/8ae57a02-e3df-42ed-9f3c-a4003c6aa624)
 
 ## Contributors
-This was a solo project created by Carol Bradsen
-<br> while a student at The Turing School for Software & Design
+This was a solo project created by Carol Bradsen while a student at The Turing School for Software & Design
 
 [LinkedIn](https://www.linkedin.com/in/carol-bradsen/) 
 
