@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
-import { world } from "../api-calls/api-calls";
+import { world, usa } from "../api-calls/api-calls";
 import Header from '../Header/Header';
 import Home from "../Home/Home";
 import StoryDetail from "../StoryDetail/StoryDetail";
 
 function App() {
-  const [worldNews, setWorldNews] = useState([]);
+  const [allNews, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -16,11 +16,15 @@ function App() {
    useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  
+
   useEffect(() => {
-    world()
-      .then((data) => {
-        setWorldNews(data.articles);
+    Promise.all([world(), usa()])
+      .then((allData) => {
+        const worldNews = allData[0].articles;
+        const usaNews = allData[1].articles;
+        const combinedNews = [...worldNews, ...usaNews];
+
+        setNews(combinedNews);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -43,10 +47,10 @@ function App() {
         <Routes>
           <Route 
             path="/" 
-            element={<Home worldNews={worldNews}/>} />
+            element={<Home allNews={allNews}/>} />
           <Route
             path="/:id/:title"
-            element={<StoryDetail worldNews={worldNews}/>} />
+            element={<StoryDetail allNews={allNews}/>} />
         </Routes>
      
     </div>

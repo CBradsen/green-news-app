@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 
-function StoryDetail({ worldNews }) {
+function StoryDetail({ allNews }) {
   let { id } = useParams();
-  const article =worldNews.find(article => article.id === id);
+  const article = allNews.find(article => article.id === id);
 
   if (!article) {
     return (
