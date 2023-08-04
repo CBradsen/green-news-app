@@ -48,6 +48,7 @@ After settling on Green Energy news, I:
 - created a list of project tasks with a [github project board](https://github.com/users/CBradsen/projects/2) 
 <br>
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/f0d09cbb-effd-4cb2-a205-dfdc79e57b55)
+<br>
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/459c758f-e0d5-4e90-8c4b-67dc0e2a3537)
 <br>
 ## Technologies
