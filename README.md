@@ -39,9 +39,9 @@ I wanted to find a niche that had value to potential users and something I cared
 <br>
 After settling on Green Energy news, I:
 <br>
-- created a user persona
 - researched other online news sites
 - drew lofi wireframes
+- created a user persona
 - wrote user stories
 - kept prject notes in a Notion page
 - created a list of project tasks with a [github project board](https://github.com/users/CBradsen/projects/2) 
