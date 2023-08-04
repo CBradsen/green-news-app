@@ -10,6 +10,7 @@ function App() {
   const [allNews, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [category, setCategory] = useState("all");
 
   const location = useLocation();
 
@@ -41,9 +42,14 @@ function App() {
     return <div>Error: {error}</div>;
   }
 
+  function handleCategoryChange(value) {
+    setCategory(value);
+  }
+
   return (
       <div className="container">
         <Header/>
+        <SortMenu onCategoryChange={handleCategoryChange} />
         <Routes>
           <Route 
             path="/" 
