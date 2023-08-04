@@ -1,11 +1,14 @@
+/* main {
+  display: flex;
+  flex-direction: row;
+} */
 .story-detail {
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
+  align-content: flex-start;
   width: 60%;
-  margin: 5%;
+  max-width: 600px;
   box-sizing: Border-box;
 }
 
@@ -13,12 +16,17 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  max-height: 320px;
+  max-height: 420px;
 }
 
 .story-detail h4 {
-  font-weight: 600;
+  font-weight: 400;
   color: rgb(44, 44, 117);
 }
 
+.back-link {
+  font-size: small;
+  font-weight: 600;
+  color: rgb(5, 42, 5);
 
+}

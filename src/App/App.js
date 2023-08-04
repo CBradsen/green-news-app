@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-
-
 import "./App.css";
 import { world } from "../api-calls/api-calls";
-import Card from "../Card/Card";
+import Header from '../Header/Header';
 import Home from "../Home/Home";
 import StoryDetail from "../StoryDetail/StoryDetail";
-
-
 
 function App() {
   const [worldNews, setWorldNews] = useState([]);
@@ -37,7 +33,7 @@ function App() {
 
   return (
       <div>
-        
+        <Header/>
         <Routes>
           <Route 
             path="/" 
