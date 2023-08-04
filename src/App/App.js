@@ -5,6 +5,7 @@ import { world, usa } from "../api-calls/api-calls";
 import Header from '../Header/Header';
 import Home from "../Home/Home";
 import StoryDetail from "../StoryDetail/StoryDetail";
+import SortMenu from '../SortMenu/SortMenu';
 
 function App() {
   const [allNews, setNews] = useState([]);
@@ -43,6 +44,11 @@ function App() {
     return <div>Error: {error}</div>;
   }
 
+
+  function handleCategoryChange(value) {
+    setCategory(value);
+  }
+
   useEffect(() => {
   if (category === 'world') {
     setDisplayedNews(allNews.filter(news => news.type === 'world'));
@@ -58,9 +64,6 @@ function App() {
 }, [category]);
 
 
-  function handleCategoryChange(value) {
-    setCategory(value);
-  }
 
   return (
       <div className="container">
