@@ -2,7 +2,7 @@
 
 Green Energy News brings you the latest headlines about green energy from around the world and the United States.
 <br>
-You can sort to see only World news or news from the United States. 
+You can sort to see only World news or U.S. news.
 <br>
 Then click to read the article. 
 
