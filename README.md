@@ -48,13 +48,13 @@ After settling on Green Energy news, I:
 - created a list of project tasks with a [github project board](https://github.com/users/CBradsen/projects/2) 
 <br>
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/f0d09cbb-effd-4cb2-a205-dfdc79e57b55)
-<br>
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/459c758f-e0d5-4e90-8c4b-67dc0e2a3537)
 <br>
+
 ## Technologies
-React, 18.2.0 <br>
-React Router, 6.14.2 <br>
-UUID 9.0 <br>
+- React, 18.2.0 
+- React Router, 6.14.2
+- UUID 9.0 
 
 Project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -65,8 +65,8 @@ Project was bootstrapped with [Create React App](https://github.com/facebook/cre
 
 ### `npm start`
 To see the site for yourself, clone down this repo, then type:
-<br>  run npm install
-<br> typing npm start with then launch the site...
+<br> "npm install" in your terminal.
+<br> typing "npm start" will launch the site...
 <br> The app will run in the development mode on your computer. 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 <br>
