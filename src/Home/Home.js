@@ -2,13 +2,13 @@ import '../Home/Home.css';
 import Card from '../Card/Card'
 
 
-function Home({allNews}) {
+function Home({displayedNews}) {
 
   return (
      <main>
-        <h1>Recent Headlines</h1>
+        <h1>Recent Green Energy News</h1>
         <div className="Home">
-          {allNews.map((article) => (
+          {displayedNews.map((article) => (
             <Card key={article.id} article={article} />
           ))}
         </div>

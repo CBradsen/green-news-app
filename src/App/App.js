@@ -5,11 +5,14 @@ import { world, usa } from "../api-calls/api-calls";
 import Header from '../Header/Header';
 import Home from "../Home/Home";
 import StoryDetail from "../StoryDetail/StoryDetail";
+import SortMenu from '../SortMenu/SortMenu';
 
 function App() {
   const [allNews, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [category, setCategory] = useState("all");
+  const [displayedNews, setDisplayedNews] = useState([]);
 
   const location = useLocation();
 
@@ -25,6 +28,7 @@ function App() {
         const combinedNews = [...worldNews, ...usaNews];
 
         setNews(combinedNews);
+        setDisplayedNews(combinedNews);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -33,7 +37,35 @@ function App() {
       });
   }, []);
 
-  if (isLoading) {
+
+  function handleCategoryChange(value) {
+    setCategory(value);
+  }
+
+  useEffect(() => {
+  if (category === 'world') {
+    setDisplayedNews(allNews.filter(article => article.type === 'World'));
+  } else if (category === 'usa') {
+    setDisplayedNews(allNews.filter(article => article.type === 'USA'));
+  } else if (category === 'today') {
+    let todaysDate = new Date();
+    let dateToday = todaysDate.toISOString().split("T")[0];
+      console.log(dateToday, "dateToday")
+
+    // let today = new Date();
+    // let formattedToday = `${today.toLocaleString( 'default', { month: 'long'})} ${today.getDate()}`;
+
+    setDisplayedNews(allNews.filter(article => {
+    let publishedDate = article.publishedAt.split("T")[0];
+    console.log(publishedDate, "publishedDate")
+    return publishedDate === dateToday
+  }));
+  } else {
+    setDisplayedNews(allNews);
+  }
+}, [category]);
+
+if (isLoading) {
     return <div>Loading...</div>;
   }
 
@@ -41,13 +73,16 @@ function App() {
     return <div>Error: {error}</div>;
   }
 
+
+
   return (
       <div className="container">
         <Header/>
+        <SortMenu onCategoryChange={handleCategoryChange} />
         <Routes>
           <Route 
             path="/" 
-            element={<Home allNews={allNews}/>} />
+            element={<Home displayedNews={displayedNews}/>} />
           <Route
             path="/:id/:title"
             element={<StoryDetail allNews={allNews}/>} />
