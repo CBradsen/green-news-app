@@ -19,6 +19,7 @@ It limits the scope of publications to bbc.co.uk, reuters.com, aljazeera.com, an
 This allows for a high quality of returns. 
 
 The USA query includes the same search words and focuses on US media publications:
+<br>
 washingtonpost.com, denverpost.com, latimes.com, and usatoday.com
 
 ## Accessability
