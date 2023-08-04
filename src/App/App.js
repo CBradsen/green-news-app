@@ -1,41 +1,35 @@
-
-import React, { useState, useEffect } from 'react';
-import genlogo from '../assets/genlogo.svg';
-import './App.css';
-import { world } from '../api-calls/api-calls';
-import Card from '../Card/Card'
-
-const date = new Date(); 
-const headline = { 
-  weekday: 'long', 
-  year: 'numeric', 
-  month: 'long', 
-  day: 'numeric' 
-};
-
-const todayQuery = date.toISOString().split('T')[0];
-
-const today = date.toLocaleDateString('en-US', headline);
-
+import React, { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import "./App.css";
+import { world } from "../api-calls/api-calls";
+import Header from '../Header/Header';
+import Home from "../Home/Home";
+import StoryDetail from "../StoryDetail/StoryDetail";
 
 function App() {
   const [worldNews, setWorldNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const location = useLocation();
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
   useEffect(() => {
     world()
-    .then(data => {
-      setWorldNews(data.articles);
-      setIsLoading(false);
-    })
-     .catch(err => {
+      .then((data) => {
+        setWorldNews(data.articles);
+        setIsLoading(false);
+      })
+      .catch((err) => {
         setError(err.message);
         setIsLoading(false);
       });
   }, []);
 
-   if (isLoading) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
@@ -43,25 +37,18 @@ function App() {
     return <div>Error: {error}</div>;
   }
 
-
   return (
-    <div className="Home">
-      <header className="App-header">
-        <img src={genlogo} className="App-logo" alt="green-energy-news-logo" />
-        <div className="date-container">
-          <h1 className="today">
-          {today}
-          </h1>
-        </div>
-      </header>
-      <h2>
-          Recent World Headlines
-      </h2>
-      <main>
-        {worldNews.map((article, index) => (
-          <Card key={index} article={article} />
-        ))}
-      </main>
+      <div className="container">
+        <Header/>
+        <Routes>
+          <Route 
+            path="/" 
+            element={<Home worldNews={worldNews}/>} />
+          <Route
+            path="/:id/:title"
+            element={<StoryDetail worldNews={worldNews}/>} />
+        </Routes>
+     
     </div>
   );
 }
