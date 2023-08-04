@@ -1,12 +1,52 @@
 # Green Energy News
 
-Green Energy News brings you the latest headlines from around the world, the Western United States, and Colorado.
+Green Energy News brings you the latest headlines about green energy from around the world and the United States.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/8ae57a02-e3df-42ed-9f3c-a4003c6aa624)
 
+## Query
 
-## Font
-Lato is used through out. This sans-serif font was chosen for its readability, nod to newspaper fonts, and interesting look.
+This site is built by accessing data collected by News API newsapi.org
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/1c14582f-977d-48f4-ac23-f08ea6d523b8)
+
+To retreive WORLD green energy news the Everything end point is used.
+It also includes a search for energy AND (solar OR wind OR clean OR green OR "climate change").
+It limits the scope of publications to bbc.co.uk, reuters.com, aljazeera.com, and thenextweb.com
+This allows for a high quality of returns. 
+
+The USA query includes the same search words and focuses on US media publications:
+washingtonpost.com, denverpost.com, latimes.com, and usatoday.com
+
+## Accessability
+In a Lighthouse review the site recieved an 8/9.
+This was not 9/9 due to using smaller headline sizes at the top of the page.
+Future iterations could remedy this, so that screen readers could best serve visitors to the site. 
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/db6b2158-ed8d-43d2-905e-415c15fed0ac)
+
+The font Lato was chosen from Google Fonts and used exclusively. 
+This sans-serif font was chosen for its readability, nod to newspaper fonts, and multiple font weights.
+
+## Process
+
+Experimenting with the api and it's possibilities began my UX Design process. 
+I wanted to find a niche that was both interesting to me and had value to potential users.
+
+After settling on Green Energy news, I 
+- created a user persona
+- researched other online news sites
+- drew lofi wireframes
+- wrote user stories
+- created a list of micro-steps with a github project board 
+
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/f0d09cbb-effd-4cb2-a205-dfdc79e57b55)
+![image](https://github.com/CBradsen/green-news-app/assets/117617970/459c758f-e0d5-4e90-8c4b-67dc0e2a3537)
+
+## Technologies
+React, 18.2.0
+React Router, 6.14.2
+UUID 9.0
+
+Project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -20,56 +60,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
