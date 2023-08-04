@@ -22,11 +22,12 @@ function StoryDetail({ worldNews }) {
         </Link>
       </div>
       <div className="story-detail">
-        <h4>| {article.type}</h4>
+        <h5>| {article.type}</h5>
         <img src={article.urlToImage} alt="Image illustrating the article"></img>
         <h2>{article.title}</h2>
         <h5>{article.source.name}</h5>
         <p>{article.formattedDate} —{article.content}</p>
+        {/* <p>Original Article {article.url}</p> */}
       </div>
     </main>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import { world } from "../api-calls/api-calls";
 import Header from '../Header/Header';
@@ -11,6 +11,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const location = useLocation();
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
   useEffect(() => {
     world()
       .then((data) => {
@@ -32,7 +38,7 @@ function App() {
   }
 
   return (
-      <div>
+      <div className="container">
         <Header/>
         <Routes>
           <Route 

@@ -6,7 +6,7 @@ function Home({worldNews}) {
 
   return (
      <main>
-        <h2>Recent Headlines</h2>
+        <h1>Recent Headlines</h1>
         <div className="Home">
           {worldNews.map((article) => (
             <Card key={article.id} article={article} />

@@ -1,0 +1,5 @@
+.container {
+  max-width: 700px; /* This is the maximum width your content can take up. Adjust according to your needs */
+  margin: 0 auto; /* This will center the content horizontally */
+  padding: 0 20px; /* This adds some space on the left and right of the content if the window is narrower than the max-width */
+}
