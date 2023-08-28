@@ -22,7 +22,7 @@ The USA query includes the same search words and focuses on US media publication
 <br>
 washingtonpost.com, denverpost.com, latimes.com, and usatoday.com
 
-## Accessability
+## Accessibility
 The font Lato was chosen from Google Fonts and used exclusively. 
 <br>This sans-serif font was chosen for its readability, nod to newspaper fonts, and multiple font weights.
 <br>
