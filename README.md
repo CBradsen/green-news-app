@@ -44,7 +44,7 @@ After settling on Green Energy news, I:
 - drew lofi wireframes
 - created a user persona
 - wrote user stories
-- kept prject notes in a Notion page
+- used Notion for project notes 
 - created a list of project tasks with a [github project board](https://github.com/users/CBradsen/projects/2) 
 
 ![image](https://github.com/CBradsen/green-news-app/assets/117617970/f0d09cbb-effd-4cb2-a205-dfdc79e57b55)
